@@ -2,7 +2,7 @@ import discord
 
 client = discord.Client()
 
-# My discord bot token. Token is in .gitignore.
+# Read discord bot token
 f = open('./token.txt', 'r')
 token = f.read()
 f.close()
