@@ -1,11 +1,13 @@
+import json
 import discord
 
 client = discord.Client()
 
 # Read discord bot token
-f = open('./token.txt', 'r')
-token = f.read()
-f.close()
+file = open('./config.json', 'r')
+config = json.load(file)
+token = config['token']
+file.close()
 
 # Bot startup event
 @client.event
