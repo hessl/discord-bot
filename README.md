@@ -1,7 +1,7 @@
 ## A discord bot in a docker image.
 
 ### Creating this in a docker image
-- Make a discord bot at https://discord.com/developers/applications and put your token in a `token.txt` file.
+- Make a discord bot at https://discord.com/developers/applications and put your bot token in a `config.json` file.
 - Build a new docker image with `docker build -t yourname/bot-name:latest .`
 
 ### Running on your machine
