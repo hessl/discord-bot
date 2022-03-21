@@ -2,12 +2,12 @@ import json
 import discord
 
 client = discord.Client()
+token = None
 
 # Read discord bot token
-file = open('./config.json', 'r')
-config = json.load(file)
-token = config['token']
-file.close()
+with open('./config.json', 'r') as file:
+	config = json.load(file)
+	token = config['token']
 
 # Bot startup event
 @client.event
@@ -22,4 +22,5 @@ async def on_message(message):
     if message.content == 'Hello':
         await message.channel.send('Hello')
 
-client.run(token)
+if __name__ == '__main__':
+	client.run(token)
